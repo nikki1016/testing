@@ -57,10 +57,10 @@
               <a class="nav-link" href="#goals">Goals</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#women_organizations">Women-Organizations</a>
+            <li class="nav-item">
               <a class="nav-link" href="#events">Events</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#women_organizations">Women-Organizations</a>
             </li>
             
             <li class="nav-item">
@@ -124,31 +124,7 @@
   <img class="goal" src="http://codetoinspire.org/wp-content/themes/cti/images/xcti-square.png.pagespeed.ic.W5rpEgVxmi.png">
  </section>
 
- <section id="events">
-    <div class="row">
-      <div class="col-md-12 section-heading text-center">
-        <h1 id="center-event">Events</h1>
-      </div>
-      <div class="slide-container col-md-4 col-sm-6 col-xs-12" v-for="index in 6">
-        <div class="wrapper " v-if="sortedEvents.length > 0">
-          <div class="clash-card "  >
-             <a v-bind:href="sortedEvents[index].link" target="_blank">
-              <div class="clash-card__image ">
-                <img v-bind:src="imgUrl[index-1]" />
-              </div>
-              <div class="clash-card__level "><i class="fa fa-calendar" aria-hidden="true"></i>
-{{ sortedEvents[index].date }}</div><hr>
-              <div class="clash-card__unit-name">{{ sortedEvents[index].title }}</div>
-              <div class="clash-card__unit-description">
-                 <i class="fa fa-map-marker" aria-hidden="true"></i>  {{ sortedEvents[index].location }}
-              </div>
-            </a>
-          </div> <!-- end clash-card barbarian-->
-        </div> <!-- end wrapper -->
-      </div> <!-- end container -->
-    </div>
-    <div class="moreEvents"><a href="/testing/events" target="_blank"> More Events</a></div>
-</section>
+
  <section id="women_organizations">
   <div class="jumbotron" >
   <h1>Information About Women-Organizations.  </h1>
@@ -189,6 +165,34 @@
   </div>
   </div>
  </section> 
+
+ <section id="events">
+    <div class="row">
+      <div class="col-md-12 section-heading text-center">
+        <h1 id="center-event">Events</h1>
+      </div>
+      <div class="slide-container col-md-4 col-sm-6 col-xs-12" v-for="index in 6">
+        <div class="wrapper " v-if="sortedEvents.length > 0">
+          <div class="clash-card "  >
+             <a v-bind:href="sortedEvents[index].link" target="_blank">
+              <div class="clash-card__image ">
+                <img v-bind:src="imgUrl[index-1]" />
+              </div>
+              <div class="clash-card__level "><i class="fa fa-calendar" aria-hidden="true"></i>
+{{ sortedEvents[index].date }}</div><hr>
+              <div class="clash-card__unit-name">{{ sortedEvents[index].title }}</div>
+              <div class="clash-card__unit-description">
+                 <i class="fa fa-map-marker" aria-hidden="true"></i>  {{ sortedEvents[index].location }}
+              </div>
+            </a>
+          </div> <!-- end clash-card barbarian-->
+        </div> <!-- end wrapper -->
+      </div> <!-- end container -->
+    </div>
+    <div class="moreEvents"><a href="/Girls-who-code/events" target="_blank"> More Events</a></div>
+</section>
+
+
  <section id="contact">
  <div class="jumbotron">
  <h1>Contact Us</h1>
