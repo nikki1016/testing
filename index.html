@@ -52,14 +52,13 @@
             <li class="nav-item">
               <a class="nav-link" href="#projects">Projects</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#events">Events</a>
-            </li>
 
             <li class="nav-item">
               <a class="nav-link" href="#goals">Goals</a>
             </li>
-
+            <li class="nav-item">
+              <a class="nav-link" href="#events">Events</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#women_organizations">Women-Organizations</a>
             </li>
@@ -102,8 +101,8 @@
      
       
         
-  <div class="sec" >
-      <p> Only 1 in 10 Open Source Contributors are women</p>
+  <div class="sec" onmouseover="typing()">
+      <p id="start1"></p>
   </div>
         
   <section id="projects">
@@ -111,6 +110,19 @@
   <p>Together we can make things better. OS4W aims to be a resource for connecting all women, including women of color and transgender women, to open source projects that are welcoming, inclusive, and appreciative of diversity in their contributors</p>
   </div>
   </section>
+
+<section id="goals">
+  <div class="jumbotron1">
+  <h1>
+     OUR GOALS
+  </h1>
+  <p>This project is started with an aim to get more woman contributors to Open Source. What we want is more females enchanted with the mysteries of open source and to feel happy and proud writing codes or contributing to an open source project.</p>
+  
+  <div><h4 class="git">Empower</h4><span class="git1">Empower women with skills needed for professional achievements.</span></div>
+  <div><h4 class="git">Action</h4><span class="git1">Our driving force is to push conversation forward and encourage action around gender parity.</span></div>
+  <div><h4 class="git">A Role Model</h4><span class="git1">Build a global community where networking and mentorship is valued.</span></div>
+  <img class="goal" src="http://codetoinspire.org/wp-content/themes/cti/images/xcti-square.png.pagespeed.ic.W5rpEgVxmi.png">
+ </section>
 
  <section id="events">
     <div class="row">
@@ -137,42 +149,20 @@
     </div>
     <div class="moreEvents"><a href="/Girls-who-code/events" target="_blank"> More Events</a></div>
 </section>
-
-<section id="goals">
-  <div class="jumbotron1">
-    <h1>
-       OUR GOALS
-    </h1>
-    <p>This project is started with an aim to get more woman contributors to Open Source. What we want is more females enchanted with the mysteries of open source and to feel happy and proud writing codes or contributing to an open source project.</p>
-  
-    <div>
-      <h4 class="git">Empower</h4>
-      <span class="git1">Empower women with skills needed for professional achievements.</span>
-    </div>
-    <div>
-      <h4 class="git">Action</h4><span class="git1">Our driving force is to push conversation forward and encourage action around gender parity.</span>
-    </div>
-    <div>
-      <h4 class="git">A Role Model</h4><span class="git1">Build a global community where networking and mentorship is valued.</span>
-    </div>
-    <img class="goal" src="http://codetoinspire.org/wp-content/themes/cti/images/xcti-square.png.pagespeed.ic.W5rpEgVxmi.png">
-  </div>
- </section>
-
  <section id="women_organizations">
   <div class="jumbotron" >
-    <h1>Information About Women-Organizations.  </h1>
+  <h1>Information About Women-Organizations.  </h1>
 
-    <div class="organization">
-      <div class="organization-badge">
-        <img class="normal" src="https://www.filepicker.io/api/file/RHJzJuTZQkSwIyQZO226/convert?fit=clip&h=586&w=1120">
-        <img class="peculiar" src="static/img/women.png">
-      </div>
-      <h3> <a href="https://www.womenwhocode.com/">Women Who Code</a></h3>
-      <div >
-        Women Who Code (WWCode) is a global 501(c)(3) non-profit dedicated to inspiring women to excel in technology careers. They strongly believe in the value of diversity, and envision a world where women are representative as technical executives, founders, venture capitalists, board members, and software engineers.  
-      </div>
-    </div>
+  <div class="organization">
+  <div class="organization-badge">
+    <img class="normal" src="https://www.filepicker.io/api/file/RHJzJuTZQkSwIyQZO226/convert?fit=clip&h=586&w=1120">
+    <img class="peculiar" src="static/img/women.png">
+  </div>
+  <h3> <a href="https://www.womenwhocode.com/">Women Who Code</a></h3>
+  <div>
+    Women Who Code (WWCode) is a global 501(c)(3) non-profit dedicated to inspiring women to excel in technology careers. They strongly believe in the value of diversity, and envision a world where women are representative as technical executives, founders, venture capitalists, board members, and software engineers.  
+  </div>
+  </div>
 
 
   <div class="organization">
@@ -315,8 +305,25 @@
     }, 3000);
  
 });
+    var text="Only 1 in 10 Open Source Contributors are women.";
+ var i=0;
+        var speed=120;
+        
+    function typing()
+      {
+       
+        if(i<text.length)
+        {
+          document.getElementById("start1").innerHTML+=text.charAt(i);
+          i++;
+          setTimeout(typing,speed);
+
+        }
+       
+      }
 </script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
 <script src="https://unpkg.com/vue"></script>
